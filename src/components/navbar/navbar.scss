@@ -1,0 +1,94 @@
+$primaryColor: rgba(255, 255, 255, 0.87);
+
+
+.navbar-container {
+    position: relative;
+    color: $primaryColor;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 0;
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{
+            list-style: none;
+            margin: 0 1rem;
+            padding: .5rem .5rem;
+            font-size: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            transition: 350ms ease-in-out;
+            border-radius: 5px;
+            &:hover {
+                background-color: #e91e63;
+            }
+
+        }
+    }
+    .responsive-menu_container {
+        display: none;
+    }
+    @media screen and (max-width: 768px) {
+        .navbar-links_container {
+            display: none;
+        }
+        .responsive-menu_container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            a {
+                text-decoration: none;
+                padding: .5rem .5rem;
+                border-radius: 5px;
+                font-size: 20px;
+            }
+            .responsive-menu_links {
+                position: absolute;
+                top: 25px;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-top: 2rem;
+                z-index: 999;
+                background-color: #4b0d2298;
+                .menu-close_btn {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                a {
+                    list-style: none;
+                    margin: 0 1rem;
+                    padding: .5rem .5rem;
+                    font-size: 25px;
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: white;
+                    transition: 350ms ease-in-out;
+                    border-radius: 5px;
+                    &:hover {
+                        background-color: #e91e63;
+                    }
+                }
+            }
+            .hide {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+        padding: 0 5rem;
+    }
+    }
